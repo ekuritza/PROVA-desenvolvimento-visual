@@ -1,0 +1,24 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title> Cadastrar Jogo </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <label>Seleção A</label>
+    <div>
+      <select  [(ngModel)]="selecaoAId">
+        <option *ngFor="let selecao of selecoes" [value]="selecao.id">{{selecao.nome}}</option>
+      </select>
+    </div>
+
+    <label>Seleção B</label>
+    <div>
+      <select [(ngModel)]="selecaoBId">
+        <option *ngFor="let selecao of selecoes" [value]="selecao.id">{{selecao.nome}}</option>
+      </select>
+    </div>
+
+    <button id="btnCadastrar" (click)="cadastrar()" style="margin-top: 1rem; padding:0rem 5rem">Cadastrar</button	>
+
+  </mat-card-content>
+
+</mat-card>
